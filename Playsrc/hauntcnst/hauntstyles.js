@@ -52,7 +52,7 @@ export const about = StyleSheet.create({
     text: {
         fontSize: 17,
         lineHeight: 22,
-        fontWeight: '600',
+        fontWeight: '700',
         color: '#fff',
         fontFamily: FONT.MONTSERRAT,
         textAlign: 'center'
