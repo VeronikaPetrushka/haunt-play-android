@@ -77,9 +77,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.hauntplay"
+    namespace "haunted.play.house.game"
     defaultConfig {
-        applicationId "com.hauntplay"
+        applicationId "haunted.play.house.game"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 3

@@ -287,7 +287,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Haunt.play.2025;
+				PRODUCT_BUNDLE_IDENTIFIER = haunted.play.house.game;
 				PRODUCT_NAME = HauntPlay;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -316,7 +316,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Haunt.play.2025;
+				PRODUCT_BUNDLE_IDENTIFIER = haunted.play.house.game;
 				PRODUCT_NAME = HauntPlay;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";

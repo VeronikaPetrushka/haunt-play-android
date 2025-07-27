@@ -1,4 +1,4 @@
-package com.hauntplay
+package haunted.play.house.game
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

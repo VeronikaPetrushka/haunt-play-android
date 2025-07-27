@@ -1,4 +1,4 @@
-package com.hauntplay
+package haunted.play.house.game
 
 import android.app.Application
 import com.facebook.react.PackageList
