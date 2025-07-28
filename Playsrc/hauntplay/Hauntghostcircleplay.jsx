@@ -285,15 +285,24 @@ const Hauntghostcircleplay = () => {
         const minutes = Math.floor(timeLeft / 60);
         const seconds = timeLeft % 60;
 
+        const inputRef = useRef(null);
+        const hasFocusedRef = useRef(false); // Prevent repeated focus
+
+        useEffect(() => {
+            if (!hasFocusedRef.current && inputRef.current) {
+            inputRef.current.focus();
+            hasFocusedRef.current = true;
+            }
+        }, []);
+
         return (
-            <KeyboardAvoidingView
-                style={{ flex: 1 }}
-                behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-                keyboardVerticalOffset={Platform.OS === 'ios' ? 80 : 0}
-            >
+            // <KeyboardAvoidingView
+            //     style={{ flex: 1 }}
+            //     behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            //     keyboardVerticalOffset={Platform.OS === 'ios' ? 80 : 0}
+            // >
                 <ScrollView 
                     contentContainerStyle={{ flexGrow: 1, padding: 20 }}
-                    keyboardShouldPersistTaps="handled"
                 >
                 <View style={{ alignItems: 'center', marginBottom: 30 }}>
                     <View style={{
@@ -321,6 +330,7 @@ const Hauntghostcircleplay = () => {
                     </Text>
 
                     <TextInput
+                        ref={inputRef}
                         style={{
                             backgroundColor: '#1C77D4',
                             borderRadius: 22,
@@ -336,7 +346,6 @@ const Hauntghostcircleplay = () => {
                         placeholder="Type your answer here..."
                         value={currentAnswer}
                         onChangeText={setCurrentAnswer}
-                        autoFocus
                     />
                 </View>
 
@@ -349,8 +358,10 @@ const Hauntghostcircleplay = () => {
                         {currentPlayerIndex < players.length - 1 ? 'Next Player' : 'Finish'}
                     </Text>
                 </TouchableOpacity>
+
+                <View style={{height: 400}} />
             </ScrollView>
-        </KeyboardAvoidingView>
+        // </KeyboardAvoidingView>
         );
     };
 
